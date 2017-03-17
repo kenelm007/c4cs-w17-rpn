@@ -4,7 +4,9 @@ python:
 install:
   - pip install coveralls
 script:
-  make
+  - coverage erase
+  - make
 after_success:
-  coveralls
+  - coverage combine
+  - coveralls
 
