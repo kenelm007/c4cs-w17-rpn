@@ -1,5 +1,10 @@
 language: python
 python:
   - "3.5"
-script: make
+install:
+  - pip install coveralls
+script:
+  coverage run --source=operator rpn.py test
+after_success:
+  coveralls
 
