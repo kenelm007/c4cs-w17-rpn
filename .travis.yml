@@ -4,7 +4,7 @@ python:
 install:
   - pip install coveralls
 script:
-  coverage run --source=operator test_rpn.py test
+  make
 after_success:
   coveralls
 
