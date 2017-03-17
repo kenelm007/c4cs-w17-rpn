@@ -10,3 +10,9 @@ class TestBasics(unittest.TestCase):
     def test_expo(self):
         result = rpn.calculate("2 3 ^")
         self.assertEqual(8, result)
+    def test_multi(self):
+        result = rpn.calculate("2 3 *")
+        self.assertEqual(6, result)
+    def test_multi(self):
+        result = rpn.calculate("9 3 /")
+        self.assertEqual(3, result)
